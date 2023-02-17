@@ -1,0 +1,22 @@
+<h1>Coucou batch 1099 🏍️</h1>
+
+<h2>Meet our team</h2>
+
+<form action="/about" method="get">
+  <label for="member">Who are you looking for?</label>
+  <input type="text" name="member" value="<%= params[:member] %>" placeholder="Type a name">
+  <input type="submit">
+</form>
+
+
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
+
+
+
+
+<%= link_to "home", root_path %>
+
